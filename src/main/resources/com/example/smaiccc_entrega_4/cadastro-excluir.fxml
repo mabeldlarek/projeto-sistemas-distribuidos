@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="666.0" style="-fx-background-color: #E8F3F5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#537188" fontSmoothingType="LCD" layoutX="172.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="EXCLUIR MEU CADASTRO" textAlignment="CENTER" wrappingWidth="323.0">
+         <font>
+            <Font name="Cambria" size="27.0" />
+         </font>
+      </Text>
+      <Label layoutX="195.0" layoutY="131.0" style="-fx-font-weight: bold;" text="Senha:" />
+      <Button fx:id="btExcluir" layoutX="264.0" layoutY="211.0" mnemonicParsing="false" onAction="#excluirCadastro" prefHeight="30.0" prefWidth="107.0" style="-fx-font-weight: bold; -fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );" text="EXCLUIR" />
+      <Text layoutX="188.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para excluir sua conta digite sua senha.">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtErro" fill="RED" layoutX="189.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="258.0" />
+      <PasswordField fx:id="txtSenha" layoutX="259.0" layoutY="127.0" />
+   </children>
+</Pane>

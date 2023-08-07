@@ -1,0 +1,24 @@
+CREATE DATABASE IF NOT EXISTS smaicc;
+
+CREATE TABLE incidente (
+  id_incidente int NOT NULL AUTO_INCREMENT,
+  id int NOT NULL,
+  data char(10) DEFAULT NULL,
+  hora char(5) DEFAULT NULL,
+  estado char(2) DEFAULT NULL,
+  cidade varchar(50) DEFAULT NULL,
+  bairro varchar(50) DEFAULT NULL,
+  rua varchar(50) DEFAULT NULL,
+  tipo_incidente char(2) DEFAULT NULL,
+  PRIMARY KEY (id_incidente),
+  KEY id (id),
+  CONSTRAINT incidente_ibfk_1 FOREIGN KEY (id) REFERENCES usuario (id) ON DELETE CASCADE
+)
+
+CREATE TABLE usuario (
+  id int NOT NULL AUTO_INCREMENT,
+  nome varchar(50) DEFAULT NULL,
+  email varchar(61) DEFAULT NULL,
+  senha varchar(10) DEFAULT NULL,
+  PRIMARY KEY (id)
+)

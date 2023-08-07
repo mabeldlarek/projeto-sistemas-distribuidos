@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="493.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smaiccc_entrega_4.controller.ServidorController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="56.0" prefWidth="493.0" style="-fx-background-color: #537188;">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="111.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Servidor Interface" textAlignment="CENTER" wrappingWidth="246.2109375">
+               <font>
+                  <Font name="Cambria" size="27.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text fx:id="txtUsers" layoutX="32.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="123.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="btIniciar" layoutX="234.0" layoutY="63.0" mnemonicParsing="false" onAction="#iniciarServidor" prefHeight="38.0" prefWidth="100.0" text="Iniciar">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btEncerrar" layoutX="346.0" layoutY="63.0" mnemonicParsing="false" onAction="#encerrarServidor" prefHeight="34.0" prefWidth="100.0" text="Encerrar">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtPorta" layoutX="80.0" layoutY="71.0" prefHeight="28.0" prefWidth="134.0" />
+      <Text layoutX="14.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Porta:">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="16.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Situação servidor:" textAlignment="CENTER" wrappingWidth="154.275390625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtIsAtivo" layoutX="32.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="123.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tabelaSessao" layoutX="217.0" layoutY="158.0" prefHeight="248.0" prefWidth="246.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colIp" prefWidth="170.0" text="IP" />
+        </columns>
+      </TableView>
+      <Text layoutX="227.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes com sessão ativa" textAlignment="CENTER" wrappingWidth="225.275390625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="446.0" layoutY="123.0" mnemonicParsing="false" onAction="#atualizarTabela" prefHeight="25.0" prefWidth="35.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/reload-vector-icon.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

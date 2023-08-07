@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="374.0" style="-fx-background-color: #E8F3F5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutY="-5.0" prefHeight="49.0" prefWidth="374.0" style="-fx-background-color: #537188;">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="32.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="CADASTRO DE USUÁRIO" textAlignment="CENTER" wrappingWidth="310.2109375">
+               <font>
+                  <Font name="Cambria" size="27.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <GridPane layoutX="67.0" layoutY="82.0" prefHeight="226.0" prefWidth="240.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="41.0" minHeight="9.0" prefHeight="23.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="62.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="93.0" minHeight="0.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="101.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="101.0" minHeight="7.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="101.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="101.0" minHeight="7.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="102.0" minHeight="0.0" prefHeight="39.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="txtNome" GridPane.rowIndex="1" />
+            <TextField fx:id="txtEmail" prefHeight="15.0" prefWidth="240.0" GridPane.rowIndex="3" />
+            <Label style="-fx-font-weight: bold;" text="* Nome:" />
+            <Label style="-fx-font-weight: bold;" text="* Email:" GridPane.rowIndex="2" />
+            <Text fx:id="textErroServer" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="91.13671875" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+            <Label style="-fx-font-weight: bold;" text="* Senha:" GridPane.rowIndex="4" />
+            <GridPane GridPane.rowIndex="5">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="144.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="96.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="17.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="32.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="28.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <PasswordField fx:id="txtSenha" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Text fx:id="txtErroServer" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="239.13671875" GridPane.rowIndex="6" />
+            <Button fx:id="btCadastrar" mnemonicParsing="false" onAction="#clickCadastrar" prefHeight="30.0" prefWidth="107.0" style="-fx-font-weight: bold; -fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );" text="CADASTRAR" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <Text fill="#eb1010" layoutX="67.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Indica campos obrigatórios">
+         <font>
+            <Font name="Calibri Italic" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="666.0" style="-fx-background-color: #E8F3F5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane layoutX="14.0" layoutY="127.0">
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <TableView fx:id="table" layoutX="38.0" layoutY="130.0" prefHeight="234.0" prefWidth="592.0">
+        <columns>
+          <TableColumn fx:id="colData" prefWidth="75.0" text="DATA" />
+          <TableColumn fx:id="colHora" prefWidth="68.0" text="HORA" />
+            <TableColumn fx:id="colEstado" prefWidth="116.0" text="ESTADO" />
+            <TableColumn fx:id="colCidade" prefWidth="64.0" text="CIDADE" />
+            <TableColumn fx:id="colRua" prefWidth="82.0" text="RUA" />
+            <TableColumn fx:id="colBairro" prefWidth="77.0" text="BAIRRO" />
+            <TableColumn fx:id="colTipo" prefWidth="106.0" text="TIPO" />
+            <TableColumn fx:id="colId" prefWidth="75.0" text="ID" visible="false" />
+        </columns>
+      </TableView>
+      <Label layoutX="418.0" layoutY="70.0" text="*Estado:" />
+      <Label layoutX="202.0" layoutY="70.0" text="*Cidade:" />
+      <Label layoutX="44.0" layoutY="70.0" text="*Data:" />
+      <DatePicker fx:id="txtData" layoutX="84.0" layoutY="66.0" prefHeight="17.0" prefWidth="109.0" />
+      <TextField fx:id="txtCidade" layoutX="254.0" layoutY="66.0" />
+      <TextField fx:id="txtEstado" layoutX="469.0" layoutY="66.0" prefHeight="25.0" prefWidth="56.0" />
+      <Text fx:id="textErroServer" fill="RED" layoutX="115.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="426.13671875" />
+      <Text fill="#537188" fontSmoothingType="LCD" layoutX="164.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="LISTAGEM DE INCIDENTES" textAlignment="CENTER" wrappingWidth="339.0">
+         <font>
+            <Font name="Cambria" size="27.0" />
+         </font>
+      </Text>
+      <Button fx:id="btListar" layoutX="561.0" layoutY="66.0" mnemonicParsing="false" onAction="#listarIncidentes" prefHeight="25.0" prefWidth="69.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 ); -fx-background-color: white;" text="Listar" />
+      <Text fill="RED" layoutX="14.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Indica campos obrigatórios" wrappingWidth="148.5078125">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

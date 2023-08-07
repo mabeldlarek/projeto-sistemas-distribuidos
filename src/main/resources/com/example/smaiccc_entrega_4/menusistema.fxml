@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="666.0" style="-fx-background-color: #41644A;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="61.0" prefWidth="666.0" style="-fx-background-color: #537188;">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="8.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="SMAICC" textAlignment="CENTER" wrappingWidth="140.2109375">
+               <font>
+                  <Font name="Cambria" size="27.0" />
+               </font>
+            </Text>
+            <HBox layoutX="426.0" layoutY="18.0" prefHeight="26.0" prefWidth="214.0">
+               <children>
+                  <MenuBar prefHeight="34.0" prefWidth="178.0" style="-fx-background-radius: 0; -fx-background-color: EEEEEE;">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Incidentes">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#reportarIncidente" text="Reportar" />
+                              <MenuItem mnemonicParsing="false" onAction="#listarIncidente" text="Listar" />
+                              <MenuItem mnemonicParsing="false" onAction="#listarIncidenteUsuario" text="Listar Reportados por Mim" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Minha Conta">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#atualizarDados" text="Atualizar dados" />
+                              <MenuItem mnemonicParsing="false" onAction="#excluirConta" text="Excluir conta" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <Button fx:id="btSair" mnemonicParsing="false" onAction="#realizarLogout" prefHeight="16.0" prefWidth="36.0" style="-fx-background-color: EEEEEE; -fx-background-radius: 0;" text="Sair" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <ButtonBar layoutX="554.0" layoutY="73.0" prefHeight="40.0" prefWidth="69.0" />
+      <Pane fx:id="paneConteudo" layoutX="-1.0" layoutY="61.0" prefHeight="376.0" prefWidth="666.0" style="-fx-background-color: #E8F3F5;" />
+   </children>
+</Pane>
